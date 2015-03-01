@@ -1,0 +1,74 @@
+{
+  "name": "mysite",
+  "private": true,
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tristanjlang/mysite.git"
+  },
+  "homepage": "https://github.com/tristanjlang/mysite",
+  "author": {
+    "name": "Tristan Lang",
+    "email": "tristan@alum.mit.edu",
+    "url": "https://github.com/tristanjlang/"
+  },
+  "dependencies": {
+    "react": "0.12.2",
+    "react-router": "0.11.6",
+    "react-tools": "0.12.2"
+  },
+  "devDependencies": {
+    "axis": "0.3.0",
+    "babel": "^4.5.1",
+    "babel-core": "^4.5.4",
+    "babel-jest": "4.0.0",
+    "babel-loader": "^4.0.0",
+    "babel-runtime": "^4.5.5",
+    "bower": "1.3.12",
+    "compression-webpack-plugin": "0.1.2",
+    "css-loader": "0.9.1",
+    "expose-loader": "0.6.0",
+    "flux": "^2.0.1",
+    "graceful-fs": "3.0.5",
+    "gulp": "3.8.10",
+    "gulp-cdnizer": "1.1.2",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-if": "1.2.5",
+    "gulp-load-plugins": "0.8.0",
+    "gulp-minify-html": "0.1.8",
+    "gulp-replace": "0.5.2",
+    "gulp-rev": "3.0.0",
+    "gulp-rimraf": "0.1.1",
+    "gulp-task-listing": "1.0.0",
+    "gulp-util": "3.0.3",
+    "html-loader": "0.2.3",
+    "immutable": "3.6.2",
+    "jeet": "6.1.2",
+    "jsx-loader": "0.12.2",
+    "npm-check-updates": "1.5.1",
+    "react-a11y": "0.0.6",
+    "react-hot-loader": "1.1.4",
+    "script-loader": "0.6.1",
+    "selenium-standalone": "4.1.0",
+    "style-loader": "0.8.3",
+    "stylus-loader": "0.5.0",
+    "url-loader": "0.5.5",
+    "webpack": "1.5.3",
+    "webpack-dev-server": "1.7.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "clean": "rm -rf ./node_modules/ ./bower_components/",
+    "postinstall": "bower install --quiet",
+    "upgrade": "./node_modules/npm-check-updates/bin/npm-check-updates -u &&  ./node_modules/bower/bin/bower update",
+    "prestart": "npm install",
+    "start": "./node_modules/gulp/bin/gulp.js serve",
+    "prebuild": "npm install",
+    "build": "./node_modules/gulp/bin/gulp.js build",
+    "prod": "./node_modules/gulp/bin/gulp.js build --production",
+    "stage": "npm run build",
+    "dist": "npm run prod"
+  }
+}
